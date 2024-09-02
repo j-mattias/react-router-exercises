@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome } from "./pages";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +48,14 @@ export const router = createBrowserRouter([
         path: "old-home",
         element: <OldHome />,
       },
+      {
+        path: "account",
+        element: <Account />
+      },
+      {
+        path: "login",
+        element: <Login />
+      }
     ],
   },
 ]);
