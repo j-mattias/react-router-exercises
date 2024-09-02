@@ -6,6 +6,7 @@ export function Navbar() {
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link>
+      <Link to="/dashboard">Dashboard</Link>
     </nav>
   );
 }
