@@ -8,6 +8,7 @@ export function Navbar() {
       <Link to="/contact">Contact</Link>
       <Link to="/dashboard">Dashboard</Link>
       <Link to="/account">Account</Link>
+      <Link to="/user">Profile</Link>
       <Link to="/old-home">Old Home</Link>
     </nav>
   );

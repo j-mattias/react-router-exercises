@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
-// interface IAccountProps {
-//   auth: boolean;
-// }
-// { auth }: IAccountProps
 export function Account() {
 
   const [auth, setAuth] = useState<boolean>(false);

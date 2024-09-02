@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login } from "./pages";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +55,11 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />
-      }
+      },
+      {
+        path: "user/:id?",
+        element: <UserProfile />,
+      },
     ],
   },
 ]);
@@ -73,6 +77,9 @@ export const routerJSX = createBrowserRouter(
       </Route>
       <Route element={<OldHome />} path="old-home" />
       {/* <Route element={<NotFound />} path="*" /> */}
+      <Route element={<Account />} path="account" />
+      <Route element={<Login />} path="login" />
+      <Route element={<UserProfile />} path="user/:id?" />
     </Route>
   )
 );
