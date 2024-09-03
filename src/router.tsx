@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App, ProtectedRoute, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo } from "./pages";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +68,18 @@ export const router = createBrowserRouter([
       {
         path: "user/:id?",
         element: <UserProfile />,
+      },
+      {
+        path: "home-two",
+        element: <HomeTwo />
+      },
+      {
+        path: "about-two",
+        element: <AboutTwo />
+      },
+      {
+        path: "contact-two",
+        element: <ContactTwo />
       },
     ],
   },

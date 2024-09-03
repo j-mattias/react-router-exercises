@@ -1,0 +1,31 @@
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin-top: 2rem;
+
+  a {
+    padding: 1rem;
+    background-color: #121520;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  a.active {
+    background-color: #1254a0;
+    color: white;
+  }
+
+  a.pending {
+    background-color: red;
+  }
+
+  a.transitioning {
+    background-color: palegreen;
+  }
+
+  a.test {
+    background-color: beige;
+  }
+}
