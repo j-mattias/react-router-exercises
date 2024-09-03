@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
-import { App, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile } from "./pages";
+import { App, ProtectedRoute, Settings, Stats } from "./components";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
             element: <Stats />,
           },
           {
-            path: "a/settings",
+            path: "settings",
             element: <Settings />,
           },
         ],
@@ -49,12 +49,21 @@ export const router = createBrowserRouter([
         element: <OldHome />,
       },
       {
-        path: "account",
-        element: <Account />
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: "account",
+            element: <Account />
+          },
+          {
+            path: "sensitive-info",
+            element: <SensitiveInfo />
+          }
+        ]
       },
       {
         path: "login",
-        element: <Login />
+        element: <Login />,
       },
       {
         path: "user/:id?",
@@ -77,7 +86,10 @@ export const routerJSX = createBrowserRouter(
       </Route>
       <Route element={<OldHome />} path="old-home" />
       {/* <Route element={<NotFound />} path="*" /> */}
-      <Route element={<Account />} path="account" />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<Account />} path="account" />
+        <Route element={<SensitiveInfo />} path="sensitive-info" />
+      </Route>
       <Route element={<Login />} path="login" />
       <Route element={<UserProfile />} path="user/:id?" />
     </Route>
