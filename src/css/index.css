@@ -2,6 +2,7 @@
 @import url("./Navbar.css");
 @import url("./NavLinks.css");
 @import url("./Layout.css");
+@import url("./Signup.css");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

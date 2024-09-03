@@ -1,0 +1,61 @@
+.signup {
+  background-color: rgb(26, 26, 26);
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .breadcrumbs {
+    display: flex;
+    gap: 0.4rem;
+
+    a {
+      background-color: gray;
+      cursor: default;
+
+      &:hover {
+        color: black;
+        background-color: gray;
+      }
+    }
+
+    a.active {
+      background-color: rgb(255, 212, 93);
+    }
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    padding: 0.5rem 1rem;
+    background-color: rgb(0, 194, 129);
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    align-self: flex-end;
+
+    &:hover {
+      color: black;
+      background-color: rgb(0, 160, 107);
+    }
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    padding: 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgb(27, 27, 27);
+  }
+}

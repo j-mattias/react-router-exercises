@@ -1,6 +1,9 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App, ProtectedRoute, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo, Layout, One, Two, Three } from "./pages";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo, Layout, One, Two, Three, Signup } from "./pages";
+import { Step1 } from "./components/Step1";
+import { Step2 } from "./components/Step2";
+import { Step3 } from "./components/Step3";
 
 export const router = createBrowserRouter([
   {
@@ -98,6 +101,24 @@ export const router = createBrowserRouter([
             element: <Three />
           }
         ]
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+        children: [
+          {
+            index: true,
+            element: <Step1 />
+          },
+          {
+            path: "step2",
+            element: <Step2 />
+          },
+          {
+            path: "step3",
+            element: <Step3 />
+          }
+        ]
       }
     ],
   },
@@ -122,10 +143,15 @@ export const routerJSX = createBrowserRouter(
       </Route>
       <Route element={<Login />} path="login" />
       <Route element={<UserProfile />} path="user/:id?" />
-      <Route element={<Layout />}>
+      <Route element={<Layout />} path="layout">
         <Route element={<One />} path="one" />
         <Route element={<Two />} path="two" />
         <Route element={<Three />} path="three" />
+      </Route>
+      <Route element={<Signup />} path="signup">
+        <Route element={<Step1 />} index />
+        <Route element={<Step2 />} path="step2" />
+        <Route element={<Step3 />} path="step3" />
       </Route>
     </Route>
   )

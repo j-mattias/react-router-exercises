@@ -11,6 +11,7 @@ export function Navbar() {
       <Link to="/user">Profile</Link>
       <Link to="/old-home">Old Home</Link>
       <Link to="/layout">Layout</Link>
+      <Link to="/signup">Signup</Link>
     </nav>
   );
 }

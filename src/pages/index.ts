@@ -13,5 +13,6 @@ export * from "./OldHome";
 export * from "./One";
 export * from "./UserProfile";
 export * from "./SensitiveInfo";
+export * from "./Signup";
 export * from "./Three";
 export * from "./Two";
