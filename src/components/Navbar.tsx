@@ -10,6 +10,7 @@ export function Navbar() {
       <Link to="/account">Account</Link>
       <Link to="/user">Profile</Link>
       <Link to="/old-home">Old Home</Link>
+      <Link to="/layout">Layout</Link>
     </nav>
   );
 }

@@ -1,6 +1,7 @@
 @import url("./App.css");
 @import url("./Navbar.css");
 @import url("./NavLinks.css");
+@import url("./Layout.css");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

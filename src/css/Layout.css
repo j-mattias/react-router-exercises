@@ -1,0 +1,42 @@
+.layout {
+  display: grid;
+  grid-template-columns: 5rem 20rem;
+  gap: 1rem;
+  width: 80%;
+  justify-content: center;
+
+  h1 {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  section {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+.nav-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  a {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid rgb(13, 175, 204);
+    max-width: 4rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  a.active {
+    background-color: rgb(13, 175, 204);
+    color: black;
+  }
+}

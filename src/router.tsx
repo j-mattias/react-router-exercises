@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App, ProtectedRoute, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo } from "./pages";
+import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo, Layout, One, Two, Three } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -81,6 +81,24 @@ export const router = createBrowserRouter([
         path: "contact-two",
         element: <ContactTwo />
       },
+      {
+        path: "layout",
+        element: <Layout />,
+        children: [
+          {
+            path: "one",
+            element: <One />
+          },
+          {
+            path: "two",
+            element: <Two />
+          },
+          {
+            path: "three",
+            element: <Three />
+          }
+        ]
+      }
     ],
   },
 ]);
@@ -104,6 +122,11 @@ export const routerJSX = createBrowserRouter(
       </Route>
       <Route element={<Login />} path="login" />
       <Route element={<UserProfile />} path="user/:id?" />
+      <Route element={<Layout />}>
+        <Route element={<One />} path="one" />
+        <Route element={<Two />} path="two" />
+        <Route element={<Three />} path="three" />
+      </Route>
     </Route>
   )
 );
