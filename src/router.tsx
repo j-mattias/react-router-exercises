@@ -1,9 +1,25 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
-import { App, ProtectedRoute, Settings, Stats } from "./components";
-import { About, Contact, Home, Dashboard, NotFound, OldHome, Account, Login, UserProfile, SensitiveInfo, HomeTwo, AboutTwo, ContactTwo, Layout, One, Two, Three, Signup } from "./pages";
-import { Step1 } from "./components/Step1";
-import { Step2 } from "./components/Step2";
-import { Step3 } from "./components/Step3";
+import { App, ProtectedRoute, Settings, Stats, Step1, Step2, Step3 } from "./components";
+import {
+  About,
+  Contact,
+  Home,
+  Dashboard,
+  NotFound,
+  OldHome,
+  Account,
+  Login,
+  UserProfile,
+  SensitiveInfo,
+  HomeTwo,
+  AboutTwo,
+  ContactTwo,
+  Layout,
+  One,
+  Two,
+  Three,
+  Signup,
+} from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -56,13 +72,13 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "account",
-            element: <Account />
+            element: <Account />,
           },
           {
             path: "sensitive-info",
-            element: <SensitiveInfo />
-          }
-        ]
+            element: <SensitiveInfo />,
+          },
+        ],
       },
       {
         path: "login",
@@ -74,15 +90,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "home-two",
-        element: <HomeTwo />
+        element: <HomeTwo />,
       },
       {
         path: "about-two",
-        element: <AboutTwo />
+        element: <AboutTwo />,
       },
       {
         path: "contact-two",
-        element: <ContactTwo />
+        element: <ContactTwo />,
       },
       {
         path: "layout",
@@ -90,17 +106,17 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "one",
-            element: <One />
+            element: <One />,
           },
           {
             path: "two",
-            element: <Two />
+            element: <Two />,
           },
           {
             path: "three",
-            element: <Three />
-          }
-        ]
+            element: <Three />,
+          },
+        ],
       },
       {
         path: "signup",
@@ -108,18 +124,18 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Step1 />
+            element: <Step1 />,
           },
           {
             path: "step2",
-            element: <Step2 />
+            element: <Step2 />,
           },
           {
             path: "step3",
-            element: <Step3 />
-          }
-        ]
-      }
+            element: <Step3 />,
+          },
+        ],
+      },
     ],
   },
 ]);

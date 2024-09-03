@@ -4,4 +4,7 @@ export * from "./Navbar";
 export * from "./NavLinks";
 export * from "./Settings";
 export * from "./Stats";
+export * from "./Step1";
+export * from "./Step2";
+export * from "./Step3";
 export * from "./ProtectedRoute";
