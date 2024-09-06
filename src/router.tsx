@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
     element: <App />,
     path: "/",
     // https://reactrouter.com/en/main/route/error-element
-    errorElement: <NotFound />,
+    // errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -58,11 +58,6 @@ export const router = createBrowserRouter([
           },
         ],
       },
-      // https://reactrouter.com/en/main/start/faq#how-do-i-add-a-no-match-404-route-in-react-router-v6
-      // {
-      //   path: "*",
-      //   element: <NotFound />
-      // }
       {
         path: "old-home",
         element: <OldHome />,
@@ -136,13 +131,18 @@ export const router = createBrowserRouter([
           },
         ],
       },
+      // https://reactrouter.com/en/main/start/faq#how-do-i-add-a-no-match-404-route-in-react-router-v6
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
   },
 ]);
 
 export const routerJSX = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<App />} path="/" errorElement={<NotFound />}>
+    <Route element={<App />} path="/" >
       <Route element={<Home />} index />
       <Route element={<About />} path="about" />
       <Route element={<Contact />} path="contact" />
@@ -152,7 +152,6 @@ export const routerJSX = createBrowserRouter(
         <Route element={<Settings />} path="/dashboard/settings" />
       </Route>
       <Route element={<OldHome />} path="old-home" />
-      {/* <Route element={<NotFound />} path="*" /> */}
       <Route element={<ProtectedRoute />}>
         <Route element={<Account />} path="account" />
         <Route element={<SensitiveInfo />} path="sensitive-info" />
@@ -169,6 +168,7 @@ export const routerJSX = createBrowserRouter(
         <Route element={<Step2 />} path="step2" />
         <Route element={<Step3 />} path="step3" />
       </Route>
+      <Route element={<NotFound />} path="*" />
     </Route>
   )
 );
